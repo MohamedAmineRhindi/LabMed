@@ -1,0 +1,81 @@
+h1 {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.button-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    margin-bottom: 2em;
+}
+
+.type-btn {
+    background-color: #FFF;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    padding: 1em 1.5em .5em;
+    border-bottom: 3px solid #80ddee;
+    margin-right: 5px;
+}
+
+.withBG {
+    background-color: #80ddee;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+label {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+input {
+    font-size: 1.4rem;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+}
+
+.adresse {
+    width: 500px;
+}
+
+.add-btn {
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 45px;
+    margin-bottom: 20px;
+    background-color: #80ddee;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+}
+
+.select-div {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 2em;
+}
+
+select {
+    font-size: 1.4rem;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+}

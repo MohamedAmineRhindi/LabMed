@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Liste des infirmiers diponible</h1>
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Télephone</th>
+            <th>Fixe</th>
+        </tr>
+        <tr *ngFor="let inf of infirmiers">
+            <td>{{inf.nom}}</td>
+            <td>{{inf.prenom}}</td>
+            <td>{{inf.numPro}}</td>
+            <td>{{inf.numFixe}}</td>
+        </tr>
+    </table>
+</div>

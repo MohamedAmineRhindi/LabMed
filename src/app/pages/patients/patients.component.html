@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Liste des patients</h1>
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Date de naissance</th>
+            <th>Adresse</th>
+            <th>Numéro de Sécu</th>
+        </tr>
+        <tr *ngFor="let pat of patients">
+            <td>{{pat.nom}}</td>
+            <td>{{pat.prenom}}</td>
+            <td>{{pat.dateDeNaissance}}</td>
+            <td>{{pat.adresse}}</td>
+            <td>{{pat.numSecu}}</td>
+        </tr>
+    </table>
+</div>

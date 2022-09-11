@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Liste des déplacements</h1>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Date</th>
+            <th>Cout</th>
+        </tr>
+        <tr *ngFor="let dep of deplacements">
+            <td>{{dep.id}}</td>
+            <td>{{dep.date}}</td>
+            <td>{{dep.cout}}</td>
+        </tr>
+    </table>
+</div>

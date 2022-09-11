@@ -1,0 +1,57 @@
+<h1>Bienvenu dans la page d'ajout</h1>
+
+<div class="button-container">
+    <button [ngClass]="{'withBG': isPatientActive === true}" class="type-btn" (click)="setPatient()">Patient</button>
+    <button [ngClass]="{'withBG': isInfirmierActive === true}" class="type-btn"
+        (click)="setInfirmier()">Infirmier</button>
+    <button [ngClass]="{'withBG': isDeplacementActive === true}" class="type-btn"
+        (click)="setDeplacement()">Déplacement</button>
+</div>
+
+<div *ngIf="isPatientActive" class="container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <label for="nom">Nom</label>
+        <input name="nom" ngModel #nom="ngModel" type="text">
+        <label for="prenom">Prénom</label>
+        <input type="text" name="prenom" ngModel>
+        <label for="date">Date de naissance</label>
+        <input type="date" name="date" ngModel>
+        <label for="adresse">adresse</label>
+        <input name="adresse" ngModel type="text" class="adresse">
+        <label for="numSecu">Numéro de sécurité sociale</label>
+        <input name="numSecu" ngModel type="text">
+        <button class="add-btn">Ajouté</button>
+    </form>
+</div>
+<div *ngIf="isInfirmierActive" class="container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <label for="nom">Nom</label>
+        <input name="nom" type="text" ngModel #nom="ngModel">
+        <label for="prenom">Prénom</label>
+        <input name="prenom" type="text" ngModel>
+        <label for="numPro">Numéro pro</label>
+        <input name="numPro" type="text" ngModel>
+        <label for="numMobile">Numéro mobile</label>
+        <input name="numMobile" type="text" ngModel>
+        <label for="numFixe">Numéro pro</label>
+        <input name="numFixe" type="text" ngModel>
+        <button class="add-btn">Ajouté</button>
+    </form>
+</div>
+<div *ngIf="isDeplacementActive" class="container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <label for="patient">Patient</label>
+        <select name="patient" ngModel>
+            <option *ngFor="let patient of patients" [ngValue]="patient.id">{{patient.nom}}</option>
+        </select>
+        <label for="infirmier">Infirmier</label>
+        <select name="infirmier" ngModel>
+            <option *ngFor="let infirmier of infirmiers" [ngValue]="infirmier.id">{{infirmier.nom}}</option>
+        </select>
+        <label for="date">Date du déplacement</label>
+        <input type="date" name="date" ngModel #date="ngModel">
+        <label for="cout">Cout</label>
+        <input type="text" name="cout" ngModel>
+        <button class="add-btn">Ajouté</button>
+    </form>
+</div>

@@ -1,0 +1,45 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 2em 0;
+}
+
+table {
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    display: flex;
+    flex-direction: column  ;
+}
+
+
+
+table td,
+table th {
+    padding: 12px;
+    font-size: 1.25rem;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table th {
+    text-align: left;
+    color: #333;
+}
